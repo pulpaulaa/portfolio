@@ -10,31 +10,17 @@ function mobileMenu() {
 
 // Only for project pages
 
-let get = document.getElementsByTagName("body")[0].className.match("project");
+let getslideshow = document
+  .getElementsByTagName("body")[0]
+  .className.match("project-slideshow");
+let get2slideshows = document
+  .getElementsByTagName("body")[0]
+  .className.match("project-2slideshows");
+let getmodal = document
+  .getElementsByTagName("body")[0]
+  .className.match("project-modal");
 
-if (get) {
-  // ------------ Modal image -------------
-  // Get the modal
-  var modal = document.getElementById("myModal");
-
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-
-  function openModal(id) {
-    var img = document.getElementById(id);
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-
+if (getslideshow) {
   // ---------------------------------------
 
   // -------------- Slideshow --------------
@@ -71,6 +57,66 @@ if (get) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " slideshow-active";
   }
+
+  // 2 ---
+  if (get2slideshows) {
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    // Next/previous controls
+    function plusSlides2(n) {
+      showSlides2((slideIndex2 += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide2(n) {
+      showSlides2((slideIndex2 = n));
+    }
+
+    function showSlides2(n) {
+      let i;
+      let slides = document.getElementsByClassName("slideshow-mySlides2");
+      let dots = document.getElementsByClassName("slideshow-dot2");
+      if (n > slides.length) {
+        slideIndex2 = 1;
+      }
+      if (n < 1) {
+        slideIndex2 = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" slideshow-active", "");
+      }
+      slides[slideIndex2 - 1].style.display = "block";
+      dots[slideIndex2 - 1].className += " slideshow-active";
+    }
+  }
+}
+
+if (getmodal) {
+  // ------------ Modal image -------------
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  function openModal(id) {
+    var img = document.getElementById(id);
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 // ---------------------------------------

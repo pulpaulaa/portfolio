@@ -86,7 +86,7 @@
     <link rel="stylesheet" href="css/utilities.css" />
   </head>
 
-  <body class="project-page">
+  <body class="project-modal project-slideshow project-2slideshows">
     <header id="hero">
       <!-- Navbar -->
       <nav class="navbar">
@@ -96,8 +96,10 @@
           <!-- Navbar links -->
           <ul class="nav-menu">
             <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#">ABOUT ME</a></li>
-            <li style="margin-right: 20px;"><a class="nav-link" href="#">CONTACT</a></li>
+            <li><a class="nav-link" href="about_me.html">ABOUT ME</a></li>
+            <li style="margin-right: 20px">
+              <a class="nav-link" href="#footer">CONTACT</a>
+            </li>
 
             <!-- Toggle switch -->
             <div class="theme-switch">
@@ -117,133 +119,268 @@
         </div>
       </nav>
 
-        <section class="header-container">
-          <div class="content-text">
-            <h2>Personal projects</h2>
-            <p>The following are two projects I've been developing in my free time</p>
-          </div>
-        </section>
+      <section class="header-container">
+        <div class="content-text">
+          <h2>Personal projects</h2>
+          <p>
+            The following are two projects I've been developing in my free time,
+            and both are in early stages of development. So far, I've worked on
+            narrative design, game design and creating concept art for them.
+          </p>
+        </div>
+      </section>
     </header>
 
     <section class="container">
       <!-- Summary and images -->
       <article class="single-project-article">
-          <div class="text-box-left">
-            <img id="musicians4" class="single-project-img-left clickable-img" src="assets/project/musicians4.jpg" onclick="openModal(this.id)" alt="" >
-            <h2>The Last Musicians</h2>
-            <p></p>
+        <!-- LADO IZQ-->
+        <div style="line-height: 1.7" class="text-box-left">
+          <!--img-->
+          <div class="special-box2">
+            <img
+              id="musicians4"
+              class="single-project-img-left clickable-img"
+              src="assets/project/musicians4.jpg"
+              onclick="openModal(this.id)"
+              alt=""
+            />
           </div>
-          <div class="text-box-right">
-            <img id="socks1" class="single-project-img-right clickable-img" src="assets/project/socks1.jpg" onclick="openModal(this.id)" alt="" >
-            <h2>Socks</h2>
-            <p></p>
+          <br />
+          <h2 style="text-align: center">The Last Musicians</h2>
+          <p>
+            Adventure game set in a sci-fi world where a teenager searches for
+            her parents who vanished after the music ban. Explore musical
+            worlds, uncover family history and the truth behind a silent
+            society.
+          </p>
+
+          <br />
+
+          <!-- Slideshow -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician1"
+                class="clickable-img"
+                src="assets/project/musicians5.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician2"
+                class="clickable-img"
+                src="assets/project/musicians6.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician3"
+                class="clickable-img"
+                src="assets/project/musicians7.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+              <!--texto-->
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <video style="width: 100%" autoplay loop>
+                <source src="assets/project/musicians3.mp4" type="video/mp4" />
+              </video>
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
           </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+          </div>
+
+          <br />
+
+          <!-- img -->
+          <div class="single-image-div">
+            <img
+              id="lineup"
+              class="single-project-img-left clickable-img"
+              src="assets/project/musicians2.jpg"
+              onclick="openModal(this.id)"
+              alt="Character lineup"
+            />
+            <div class="clickable-img-caption">Character lineup</div>
+          </div>
+        </div>
+
+        <!-- LADO DER -->
+        <div style="line-height: 1.7" class="text-box-right">
+          <!--img-->
+          <div class="special-box2">
+            <img
+              id="socks1"
+              class="single-project-img-right clickable-img"
+              src="assets/project/socks1.jpg"
+              onclick="openModal(this.id)"
+              alt=""
+            />
+          </div>
+          <br />
+          <h2 style="text-align: center">My Cat Hid my Socks... Again</h2>
+          <p>
+            Point n' click game set in the player's character bedroom, where
+            their mischievous cat has made a mess and hidden all of their socks,
+            so now you have to solve puzzles to find all of them.
+          </p>
+
+          <br />
+
+          <!-- Slideshow -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock1"
+                class="clickable-img"
+                src="assets/project/socks2.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock2"
+                class="clickable-img"
+                src="assets/project/socks3.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock3"
+                class="clickable-img"
+                src="assets/project/socks5.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+              <!--texto-->
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock4"
+                class="clickable-img"
+                src="assets/project/socks4.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <div class="slideshow-text"></div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides2(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot2" onclick="currentSlide2(1)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(2)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(3)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(4)"></span>
+          </div>
+
+          <br />
+
+          <!-- img -->
+          <div class="single-image-div">
+            <img
+              id="socks10"
+              class="single-project-img-left clickable-img"
+              src="assets/project/socks10.jpg"
+              onclick="openModal(this.id)"
+              alt="Extract of puzzle dependency chart"
+            />
+            <div class="clickable-img-caption">
+              Extract of puzzle dependency chart
+            </div>
+            <a
+              href="assets/project/Socks flowchart.pdf"
+              class="btn-extra"
+              target="_blank"
+              download="Socks_game_flowchart"
+              >Download flowchart</a
+            >
+          </div>
+        </div>
       </article>
-
-      <div class="division"></div>
-
-      <!-- My contribution -->
-      <article class="single-project-article">
-          <div class="text-box-left">
-              <!-- Slideshow -->
-              <div class="slideshow-container">
-                  <!-- Full-width images with number and caption text -->
-                  <!-- 1 -->
-                  <div class="slideshow-mySlides slideshow-fade">
-                      <img id="pareidolia1" class="clickable-img" src="assets/project/moon-conquest3.jpg" style="width:100%" onclick="openModal(this.id)" alt="">
-                      <div class="slideshow-text"></div>
-                  </div>
-                  <!-- 2 -->
-                  <div class="slideshow-mySlides slideshow-fade">
-                      <img id="pareidolia2" class="clickable-img" src="assets/project/moon-conquest2.jpg" style="width:100%" onclick="openModal(this.id)" alt="">
-                      <div class="slideshow-text"></div>
-                  </div>
-                  <!-- 3 -->
-                  <div class="slideshow-mySlides slideshow-fade">
-                      <img id="pareidolia3" class="clickable-img" src="assets/project/moon-conquest4.png" style="width:100%" onclick="openModal(this.id)" alt="">
-                      <div class="slideshow-text"></div> <!--texto-->
-                  </div>
-                  <!-- 4 -->
-                  <div class="slideshow-mySlides slideshow-fade">
-                      <img id="pareidolia5" class="clickable-img" src="assets/project/moon-conquest8.png" style="width:100%" onclick="openModal(this.id)" alt="">
-                      <div class="slideshow-text"></div>
-                  </div>
-                  <!-- Next and previous buttons -->
-                  <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
-              <!-- The dots/circles -->
-              <div style="text-align:center">
-                  <span class="slideshow-dot" onclick="currentSlide(1)"></span>
-                  <span class="slideshow-dot" onclick="currentSlide(2)"></span>
-                  <span class="slideshow-dot" onclick="currentSlide(3)"></span>
-                  <span class="slideshow-dot" onclick="currentSlide(4)"></span>
-              </div>
-
-              <br>
-
-              <div style="position: relative;">
-                  <img id="pareidolia-test" class="single-project-img-left clickable-img" src="assets/project/moon-conquest5.jpg" onclick="openModal(this.id)" alt="Prototype testing">
-                  <div class="clickable-img-caption">Prototype testing</div>
-              </div>
-          </div>
-          <div class="text-box-right" style="line-height: 1.7;">
-              <h2>Main Developer</h2>
-              <ul class="contribution-list">
-                  <li>Analyzed the 1980s arcade game Q-bert, extracting and adapting its mechanics for the board game.</li>
-                  <li>Designed and illustrated all graphics, including game pieces and packaging.</li>
-                  <li>Modeled and 3D-printed character tokens.</li>
-                  <li>Created the branding and overall image for the game.</li>
-                  <li>Organized playtesting sessions.</li>
-                  <li>Crafted prototypes for testing, including a final prototype matching the final product's quality.</li>
-                  <li>Designed, edited, and printed the rulebook.</li>
-              </ul>
-              <div style="margin-top: auto; position: relative;" >
-                <img id="moon-conquest-rulebook" class="single-project-img-right clickable-img" src="assets/project/moon-conquest1.png" onclick="openModal(this.id)" alt="Rulebook (digital view)">
-                <div class="clickable-img-caption">Rulebook</div>
-              </div>
-          </div>
-      </article>
-  </section>
+    </section>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" />
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
     </div>
 
-    <a class="prev-project" href="p4_the_dogs_mystery.html">
-        <p class="prev-project-arrow">&#10094;</p>
-    </a>
-    <a class="next-project" href="#.html">
-        <p class="prev-project-arrow">&#10095;</p>
+    <a class="prev-project" href="p5_moon_conquest.html">
+      <p class="prev-project-arrow">&#10094;</p>
     </a>
 
     <footer id="footer">
-        <div class="container">
-          <a href="mailto:communitypro47@gmail.com">paula.santa.mariab@gmail.com</a>
-          <!-- Social links -->
-          <div class="social">
-            <a href="#" target="_blank"
-              ><img src="./assets/facebook-icon.svg" alt="Facebook"
-            /></a>
-            <a href="#" target="_blank"
-              ><img src="./assets/twitter-icon.svg" alt="Twitter"
-            /></a>
-            <a href="#" target="_blank"
-              ><img src="./assets/linkedin-icon.svg" alt="Linkedin"
-            /></a>
-            <a href="#" target="_blank"
-              ><img src="./assets/github-icon.svg" alt="GitHub"
-            /></a>
-            <a href="#" target="_blank"
-              ><img src="./assets/hashnode-icon.svg" alt="Hashnode"
-            /></a>
-          </div>
-          </div>
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Feel free to send me an email, message or connect with me in LinkedIn!
+        </p>
+        <br />
+        <a href="mailto:paula.santa.mariab@gmail.com"
+          >paula.santa.mariab@gmail.com</a
+        >
+        <!-- Social links -->
+        <div class="social">
+          <a href="https://pulpaulaa.itch.io/" target="_blank">
+            <i class="fa-brands fa-itch-io social-icons"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/paula-santa-maria-bartolucci/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin-in social-icons"></i>
+          </a>
+          <a href="https://www.instagram.com/pulpaulaa/" target="_blank">
+            <i class="fa fa-instagram social-icons"></i>
+          </a>
         </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>

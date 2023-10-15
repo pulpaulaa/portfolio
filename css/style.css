@@ -247,14 +247,16 @@ body {
 
 .single-project-img-left {
   max-width: 35rem;
+  min-width: 30rem;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .single-project-img-right {
   max-width: 35rem;
+  min-width: 30rem;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin-left: auto;
 }
 
@@ -377,8 +379,8 @@ iframe {
 .modal-content {
   margin: auto;
   display: block;
-  height: 100%;
   max-height: 650px;
+  max-width: 90vw;
 }
 
 /* Caption of Modal Image */
@@ -437,7 +439,8 @@ iframe {
 }
 
 /* Hide the images by default */
-.slideshow-mySlides {
+.slideshow-mySlides,
+.slideshow-mySlides2 {
   display: none;
 }
 
@@ -492,7 +495,8 @@ iframe {
 }
 
 /* The dots/bullets/indicators */
-.slideshow-dot {
+.slideshow-dot,
+.slideshow-dot2 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -521,6 +525,25 @@ iframe {
   to {
     opacity: 1;
   }
+}
+
+/* ------------------------------ Image gallery ----------------------------- */
+
+.art-gallery-container {
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  width: 100%;
 }
 
 /* --------------------------------- Footer --------------------------------- */
@@ -564,6 +587,15 @@ iframe {
   font-size: 0.8rem;
 }
 
+#footer h2 {
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  font-size: 1.2rem;
+  color: white;
+}
+
 /* ----------------------------- Responsiveness ----------------------------- */
 
 @media (max-width: 1000px) {
@@ -578,6 +610,7 @@ iframe {
   .text-box-right {
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
   }
 
   .postmortem-container {
@@ -627,6 +660,19 @@ iframe {
 
   .special-box {
     max-width: 100%;
+  }
+
+  .btn-extra {
+    display: none;
+  }
+
+  .special-box2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .special-box2 img {
+    align-self: center;
   }
 }
 
