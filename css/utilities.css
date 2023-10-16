@@ -159,7 +159,7 @@ li::selection {
 
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19),
-    inset 0 100px 1000px 10px rgba(0, 0, 0, 0.5);
+    inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
 }
 
 .card:hover .project-info {
@@ -195,7 +195,7 @@ li::selection {
 
 /* Project 6 */
 .card:nth-child(6) {
-  background: url(../assets/project/socks.jpg) center center/cover;
+  background: url(../assets/project/personal.jpg) center center/cover;
 }
 
 /* Media Queries */
