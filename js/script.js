@@ -1,3 +1,5 @@
+"use strict";
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -20,79 +22,89 @@ let getmodal = document
   .getElementsByTagName("body")[0]
   .className.match("project-modal");
 
+/* -------------------------------- Slideshow ------------------------------- */
+
+var slideIndex = 1;
+var slideIndex2 = 1;
+
 if (getslideshow) {
   // ---------------------------------------
-
   // -------------- Slideshow --------------
-
-  let slideIndex = 1;
+  var i;
+  var slides = document.getElementsByClassName("slideshow-mySlides");
+  var dots = document.getElementsByClassName("slideshow-dot");
   showSlides(slideIndex);
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
-  }
-
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slideshow-mySlides");
-    let dots = document.getElementsByClassName("slideshow-dot");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" slideshow-active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " slideshow-active";
-  }
 
   // 2 ---
   if (get2slideshows) {
-    let slideIndex2 = 1;
+    var i2;
+    var slides2 = document.getElementsByClassName("slideshow-mySlides2");
+    var dots2 = document.getElementsByClassName("slideshow-dot2");
     showSlides2(slideIndex2);
-
-    // Next/previous controls
-    function plusSlides2(n) {
-      showSlides2((slideIndex2 += n));
-    }
-
-    // Thumbnail image controls
-    function currentSlide2(n) {
-      showSlides2((slideIndex2 = n));
-    }
-
-    function showSlides2(n) {
-      let i;
-      let slides = document.getElementsByClassName("slideshow-mySlides2");
-      let dots = document.getElementsByClassName("slideshow-dot2");
-      if (n > slides.length) {
-        slideIndex2 = 1;
-      }
-      if (n < 1) {
-        slideIndex2 = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" slideshow-active", "");
-      }
-      slides[slideIndex2 - 1].style.display = "block";
-      dots[slideIndex2 - 1].className += " slideshow-active";
-    }
   }
+}
+
+function showSlides(n) {
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" slideshow-active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " slideshow-active";
+}
+
+function showSlides2(n) {
+  if (n > slides2.length) {
+    slideIndex2 = 1;
+  }
+  if (n < 1) {
+    slideIndex2 = slides2.length;
+  }
+  for (i2 = 0; i2 < slides2.length; i2++) {
+    slides2[i2].style.display = "none";
+  }
+  for (i2 = 0; i2 < dots2.length; i2++) {
+    dots2[i2].className = dots2[i2].className.replace(" slideshow-active", "");
+  }
+  slides2[slideIndex2 - 1].style.display = "block";
+  dots2[slideIndex2 - 1].className += " slideshow-active";
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Next/previous controls
+function plusSlides2(n) {
+  showSlides2((slideIndex2 += n));
+}
+
+// Thumbnail image controls
+function currentSlide2(n) {
+  showSlides2((slideIndex2 = n));
+}
+
+/* ---------------------------------- Modal --------------------------------- */
+
+function openModal(id) {
+  var img = document.getElementById(id);
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.innerHTML = img.alt;
 }
 
 if (getmodal) {
@@ -103,13 +115,6 @@ if (getmodal) {
   // Get the image and insert it inside the modal - use its "alt" text as a caption
   var modalImg = document.getElementById("img01");
   var captionText = document.getElementById("caption");
-
-  function openModal(id) {
-    var img = document.getElementById(id);
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
-  }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
@@ -171,10 +176,3 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
-
-//Adding date
-
-let myDate = document.querySelector("#datee");
-
-const yes = new Date().getFullYear();
-myDate.innerHTML = yes;
