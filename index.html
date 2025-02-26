@@ -100,11 +100,10 @@
           </h1>
           <!-- Navbar links -->
           <ul class="nav-menu">
-            <li><a class="nav-link" href="about_me.html">ABOUT ME</a></li>
             <li><a class="nav-link" href="art.html">ART</a></li>
-            <li style="margin-right: 20px">
-              <a class="nav-link" href="#footer">CONTACT</a>
-            </li>
+            <li><a class="nav-link" href="industrial.html">PRODUCT</a></li>
+            <li><a class="nav-link" href="about_me.html">ABOUT ME</a></li>
+            <li><a class="nav-link" href="#footer">CONTACT</a></li>
 
             <!-- Toggle switch -->
             <div class="theme-switch">
@@ -134,7 +133,8 @@
         <div class="content-text">
           <h2>Paula Santa María</h2>
           <p>
-            Chilean game designer with a passion for meaningful narratives,
+            Chilean integral and game designer with a passion for meaningful
+            narratives,
             <br />captivating visuals and innovative game mechanics.
           </p>
         </div>
@@ -152,15 +152,27 @@
     <section id="projects" class="project-container container">
       <div class="division"></div>
       <div class="content-text">
-        <h2>Projects</h2>
+        <h2>Game Projects</h2>
         <!--<p>Check out some of my personal and paid projects</p>-->
         <br />
       </div>
 
       <article class="project">
         <!-- Project 1 -->
-        <div class="card">
-          <a href="p1_caleidomar.html"></a>
+        <div class="card" id="card_alifeinayear">
+          <a href="p_a_life_in_a_year.html"></a>
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>A Life in a Year</h3>
+              <p>Unity</p>
+              <p>Solo Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card" id="card_caleidomar">
+          <a href="p_caleidomar.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>CaleidoMar: La Jaiba</h3>
@@ -170,9 +182,9 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="card">
-          <a href="p2_bubblegum_galaxy.html"></a>
+        <!-- Project 3 -->
+        <div class="card" id="card_bubblegum">
+          <a href="p_bubblegum_galaxy.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>Bubblegum Galaxy</h3>
@@ -182,9 +194,9 @@
           </div>
         </div>
 
-        <!-- Porject 3 -->
-        <div class="card">
-          <a href="p3_pareidolia.html"></a>
+        <!-- Porject 4 -->
+        <div class="card" id="card_pareidolia">
+          <a href="p_pareidolia.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>Pareidolia</h3>
@@ -194,9 +206,9 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="card">
-          <a href="p4_the_dogs_mystery.html"></a>
+        <!-- Project 5 -->
+        <div class="card" id="card_dog">
+          <a href="p_the_dogs_mystery.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>The Dog's Mystery</h3>
@@ -206,9 +218,9 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
-        <div class="card">
-          <a href="p5_moon_conquest.html"></a>
+        <!-- Project 6 -->
+        <div class="card" id="card_moonconquest">
+          <a href="p_moon_conquest.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>Moon Conquest</h3>
@@ -218,9 +230,9 @@
           </div>
         </div>
 
-        <!-- Project 6 -->
-        <div class="card">
-          <a href="p6_personal.html"></a>
+        <!-- Project 7 -->
+        <div class="card" id="card_personal">
+          <a href="p_personal.html"></a>
           <div class="project-info">
             <div class="project-bio">
               <h3>Personal Projects</h3>
@@ -239,11 +251,10 @@
     <footer id="footer">
       <div class="container">
         <h2>Contact</h2>
-        <p>
+        <p style="margin-bottom: 0.5rem">
           Feel free to send me an email, message or connect with me in LinkedIn!
         </p>
-        <br />
-        <a href="mailto:paula.santa.mariab@gmail.com"
+        <a href="mailto:paula.santa.mariab@gmail.com" style="font-weight: 700"
           >paula.santa.mariab@gmail.com</a
         >
         <!-- Social links -->
@@ -261,8 +272,12 @@
             <i class="fa fa-instagram social-icons"></i>
           </a>
         </div>
+        <p style="color: gray; font-size: 0.7em">
+          Website design and development by Paula Santa María.
+        </p>
       </div>
     </footer>
+
     <script src="js/script.js"></script>
   </body>
 </html>

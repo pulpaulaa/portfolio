@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Paula Santa María - Portfolio</title>
+    <meta name="title" content="Paula Santa María - Portfolio" />
+    <meta
+      name="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Paula Santa María - Portfolio" />
+    <meta
+      itemprop="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta itemprop="image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paulasantamaria.netlify.app" />
+    <meta property="og:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="og:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://paulasantamaria.netlify.app"
+    />
+    <meta property="twitter:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="twitter:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="twitter:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <script
+      src="https://kit.fontawesome.com/e91b0f15d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="project-modal project-slideshow project-2slideshows">
+    <header id="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo">
+            <a class="nav-link" href="index.html">HOME</a>
+          </h1>
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="art.html">ART</a></li>
+            <li><a class="nav-link" href="industrial.html">PRODUCT</a></li>
+            <li><a class="nav-link" href="about_me.html">ABOUT ME</a></li>
+            <li><a class="nav-link" href="#footer">CONTACT</a></li>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="assets/moon.svg" />
+                <img class="sun" src="assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <section class="header-container">
+        <div class="content-text">
+          <h2>Personal projects</h2>
+          <p>
+            The following are two projects I've been developing in my free time.
+            One is in early stages of pre-production and the other one's first
+            playable prorotype is almost ready.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <section class="container">
+      <article class="single-project-article">
+        <!-- LADO IZQ-->
+        <div style="line-height: 1.7" class="text-box-left">
+          <!--img-->
+          <div class="special-box2">
+            <img
+              id="musicians4"
+              class="single-project-img-left clickable-img"
+              src="assets/project/musicians4.jpg"
+              onclick="openModal(this.id)"
+              alt=""
+            />
+          </div>
+          <br />
+          <h2 style="text-align: center">The Last Musicians</h2>
+          <p>
+            Adventure game set in a sci-fi world where a teenager searches for
+            her parents who vanished after the music ban. Explore musical
+            worlds, uncover family history and the truth behind a silent
+            society.
+          </p>
+
+          <!-- Slideshow -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician1"
+                class="clickable-img"
+                src="assets/project/musicians5.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician2"
+                class="clickable-img"
+                src="assets/project/musicians6.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="musician3"
+                class="clickable-img"
+                src="assets/project/musicians7.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <!--texto-->
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <video style="width: 100%" autoplay loop>
+                <source src="assets/project/musicians3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+          </div>
+
+          <br />
+
+          <p>
+            The Last Musicians is a story-driven game inspired by titles like
+            Spiritfarer and Mutazione. Color, music and silence play a key
+            factor in the game's mechanics and story, creating a contrast
+            between feelings of confinement and freedom. At its core, the game
+            seeks to shed light on the experiences of marginalized groups in
+            society.
+          </p>
+
+          <br />
+
+          <!-- img -->
+          <div class="single-image-div">
+            <img
+              id="lineup"
+              class="single-project-img-left clickable-img"
+              src="assets/project/musicians2.jpg"
+              onclick="openModal(this.id)"
+              alt="Character lineup sketch"
+            />
+            <div class="clickable-img-caption">Character lineup sketch</div>
+          </div>
+        </div>
+
+        <!-- LADO DER -->
+        <div style="line-height: 1.7" class="text-box-right">
+          <!--img-->
+          <div class="special-box2">
+            <img
+              id="socks1"
+              class="single-project-img-right clickable-img"
+              src="assets/project/socks11.jpg"
+              onclick="openModal(this.id)"
+              alt=""
+            />
+          </div>
+          <br />
+          <h2 style="text-align: center">My Cat Hid my Socks... Again</h2>
+          <p>
+            Point & Click game set in your bedroom, where your mischievous cat
+            has made a mess and hidden all of your socks, so now you have to
+            solve puzzles to find all of them.
+          </p>
+
+          <br />
+
+          <!-- Slideshow -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock1"
+                class="clickable-img"
+                src="assets/project/socks15.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock2"
+                class="clickable-img"
+                src="assets/project/socks12.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock3"
+                class="clickable-img"
+                src="assets/project/socks13.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+              <!--texto-->
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock4"
+                class="clickable-img"
+                src="assets/project/socks14.jpg"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- 5 -->
+            <div class="slideshow-mySlides2 slideshow-fade">
+              <img
+                id="sock5"
+                class="clickable-img"
+                src="assets/project/socks17.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt=""
+              />
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides2(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot2" onclick="currentSlide2(1)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(2)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(3)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(4)"></span>
+            <span class="slideshow-dot2" onclick="currentSlide2(5)"></span>
+          </div>
+
+          <br />
+          <p>
+            This is a short game focused on humor, taking the classic Point &
+            Click Escape Room experience to a daily modern scenario.
+          </p>
+
+          <a
+            href="assets/project/Socks flowchart.pdf"
+            class="btn btn-secondary btn-pdf"
+            target="_blank"
+            download="Socks_game_flowchart"
+            style="margin-top: 20px"
+            >Download flowchart
+          </a>
+
+          <br />
+
+          <!-- img -->
+          <div class="single-image-div">
+            <img
+              id="socks10"
+              class="single-project-img-left clickable-img"
+              src="assets/project/socks16.png"
+              onclick="openModal(this.id)"
+              alt="Extract of puzzle dependency chart"
+            />
+            <div class="clickable-img-caption">
+              Extract of puzzle dependency chart
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" />
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+
+    <a class="prev-project" href="p_moon_conquest.html">
+      <p class="prev-project-arrow">&#10094;</p>
+    </a>
+
+    <footer id="footer">
+      <div class="container">
+        <h2>Contact</h2>
+        <p style="margin-bottom: 0.5rem">
+          Feel free to send me an email, message or connect with me in LinkedIn!
+        </p>
+        <a href="mailto:paula.santa.mariab@gmail.com" style="font-weight: 700"
+          >paula.santa.mariab@gmail.com</a
+        >
+        <!-- Social links -->
+        <div class="social">
+          <a href="https://pulpaulaa.itch.io/" target="_blank">
+            <i class="fa-brands fa-itch-io social-icons"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/paula-santa-maria-bartolucci/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin-in social-icons"></i>
+          </a>
+          <a href="https://www.instagram.com/pulpaulaa/" target="_blank">
+            <i class="fa fa-instagram social-icons"></i>
+          </a>
+        </div>
+        <p style="color: gray; font-size: 0.7em">
+          Website design and development by Paula Santa María.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
