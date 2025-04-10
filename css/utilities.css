@@ -136,10 +136,11 @@ li::selection {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0); /* initially transparent */
+  background-color: rgba(0, 0, 0, 0); /* transparent by default */
   transition: background-color 0.3s ease;
-  z-index: 5; /* behind text but above background */
-  border-radius: 5px; /* match card radius */
+  z-index: 5; /* lower than the link */
+  border-radius: 5px;
+  pointer-events: none; /* <<< THIS IS THE KEY */
 }
 
 .card:hover::before {
@@ -148,15 +149,23 @@ li::selection {
 
 .card a {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  text-decoration: none; /* No underlines on the link */
-  z-index: 10; /* Places the link above everything else in the div */
-  background-color: #fff; /* Fix to make div clickable in IE */
-  opacity: 0; /* Fix to make div clickable in IE */
-  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+  right: 0; /* added */
+  bottom: 0; /* added */
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: auto; /* in case anything disables clicks */
+}
+
+.card:hover .project-info {
+  opacity: 1;
+  z-index: 11;
+  pointer-events: none;
 }
 
 /*
@@ -170,11 +179,6 @@ li::selection {
   color: var(--primary-color);
 }
 */
-
-.card:hover .project-info {
-  opacity: 1;
-  z-index: 11;
-}
 
 /* Project Images */
 
