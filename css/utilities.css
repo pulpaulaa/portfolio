@@ -132,6 +132,20 @@ li::selection {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0); /* initially transparent */
+  transition: background-color 0.3s ease;
+  z-index: 5; /* behind text but above background */
+  border-radius: 5px; /* match card radius */
+}
+
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.6); /* uniform dark overlay */
+}
+
 .card a {
   position: absolute;
   width: 100%;
@@ -157,13 +171,9 @@ li::selection {
 }
 */
 
-.card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19),
-    inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
-}
-
 .card:hover .project-info {
   opacity: 1;
+  z-index: 11;
 }
 
 /* Project Images */
