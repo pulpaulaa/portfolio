@@ -570,6 +570,18 @@ iframe {
   }
 }
 
+.modal {
+  pointer-events: auto; /* ensures the overlay captures taps */
+}
+
+.modal-content {
+  pointer-events: auto; /* keeps the image clickable as needed */
+}
+
+body.modal-open {
+  overflow: hidden; /* prevent background scrolling */
+}
+
 /* -------------------------------- Slideshow ------------------------------- */
 
 /* Slideshow container */

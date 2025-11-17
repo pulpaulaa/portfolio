@@ -105,6 +105,12 @@ function openModal(id) {
   modal.style.display = "block";
   modalImg.src = img.src;
   captionText.innerHTML = img.alt;
+  document.body.classList.add("modal-open"); // prevent scroll
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
 }
 
 if (getmodal) {
@@ -126,7 +132,7 @@ if (getmodal) {
   // Mobile fix: tap outside the image closes the modal
   modal.addEventListener("touchstart", function (event) {
     if (event.target === modal) {
-      modal.style.display = "none";
+      closeModal();
     }
   });
 }
