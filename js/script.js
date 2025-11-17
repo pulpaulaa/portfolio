@@ -122,6 +122,13 @@ if (getmodal) {
       modal.style.display = "none";
     }
   };
+
+  // Mobile fix: tap outside the image closes the modal
+  modal.addEventListener("touchstart", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 }
 
 // ---------------------------------------

@@ -23,7 +23,8 @@
   --bg-secondary-two: #111111;
   --bg-color-three: #dddd;
 
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  /*--shadow: 0 10px 40px rgba(0, 0, 0, 0.2);*/
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   /* Font Weight */
   --weight-small: 400;
@@ -55,6 +56,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* -------------------------- Reset default styling ------------------------- */
@@ -79,6 +81,7 @@ body {
   color: var(--text-color);
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* --------------------------------- Navbar --------------------------------- */
@@ -174,10 +177,10 @@ body {
   margin: 4rem 0;
 }
 /* -------------------------------- Projects -------------------------------- */
-#projects {
+.projects {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto 5rem;
+  margin: 2rem auto;
 }
 
 #projects .btn {
@@ -215,6 +218,144 @@ body {
   position: relative;
   top: 150px;
   left: 10px;
+}
+
+/* -------------------------------- Projects New -------------------------------- */
+
+.projects-new-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.card-new {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 1em;
+  height: 25em;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.card-new:hover {
+  transform: scale(1.05);
+}
+
+.card-new-img-container {
+  overflow: hidden;
+  width: 40em;
+  display: flex;
+  justify-content: center;
+}
+
+.card-new-img {
+  height: 100%;
+}
+
+.card-new-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 22em;
+  row-gap: 5px;
+  padding: 2em 4em;
+  background-color: var(--bg-original);
+  justify-content: center; /*centrar verticalmente*/
+}
+
+.card-new-description {
+  color: var(--text-color-three);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .card-new {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .card-new-img-container {
+    width: 100%;
+    height: 300px;
+    order: -1; /*Image first always*/
+  }
+
+  .card-new-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-new-info-container {
+    width: 100%;
+    padding: 1.5em;
+  }
+}
+
+/* -------------------------------- Extra -------------------------------- */
+
+.extra_cards_group {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.extra_card {
+  background: var(--card-background);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.extra_cards_group > .extra_card {
+  flex: 1;
+  min-width: 0; /* allow children to shrink instead of forcing overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+.extra_card_info_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 2em;
+  background-color: var(--bg-original);
+}
+
+.extra_card_img_container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.extra_card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.extra_card:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .extra_cards_group {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .extra_card {
+    width: 100%;
+  }
 }
 
 /* ----------------------------- Single project ----------------------------- */
@@ -342,6 +483,7 @@ iframe {
 }
 
 /* ------------------------------- Modal image ------------------------------ */
+
 .clickable-img {
   cursor: pointer;
   transition: 0.3s;
@@ -749,5 +891,10 @@ iframe {
   .header-container .btn {
     border-radius: 30px;
     width: 80%;
+  }
+
+  .single-project-img-left,
+  .single-project-img-right {
+    min-width: 0;
   }
 }
