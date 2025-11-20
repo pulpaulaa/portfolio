@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Paula Santa María - Portfolio</title>
+    <meta name="title" content="Paula Santa María - Portfolio" />
+    <meta
+      name="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Paula Santa María - Portfolio" />
+    <meta
+      itemprop="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta itemprop="image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paulasantamaria.netlify.app" />
+    <meta property="og:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="og:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://paulasantamaria.netlify.app"
+    />
+    <meta property="twitter:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="twitter:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="twitter:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <script
+      src="https://kit.fontawesome.com/e91b0f15d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="project-modal project-slideshow">
+    <header id="hero">
+      <!-- Navbar -->
+      <div include-html="modules/navbar.html"></div>
+
+      <section class="header-container">
+        <div class="content-text">
+          <h2>Membrillo Hid My Socks</h2>
+          <p>2025</p>
+        </div>
+        <a
+          href="https://store.steampowered.com/app/4075590/Membrillo_Hid_My_Socks/"
+          class="btn btn-secondary"
+          target="_blank"
+          >Steam page</a
+        >
+      </section>
+    </header>
+
+    <section class="container">
+      <!-- Summary and video -->
+      <article class="single-project-article">
+        <div class="text-box-left special-box">
+          <h2>Summary</h2>
+          <p>
+            <i>Membrillo Hid My Socks</i> is a silly point & click hidden object
+            game about finding your missing socks after your mischievous cat
+            went on a rampage.
+          </p>
+          <p class="p-textbox">
+            <b>Engine:</b> Unity <br />
+            <b>Platform:</b> PC <br />
+            <b>Role:</b> Solo developer <br />
+            <b>Type:</b> Personal project <br />
+          </p>
+        </div>
+        <!-- Foto o video -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/tR8FObQtCU4?si=p4N6HbwC3yFxPkOw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </article>
+
+      <div class="division"></div>
+
+      <!-- My contribution -->
+      <div class="content-text">
+        <h3>My Contribution</h3>
+      </div>
+      <article class="single-project-article">
+        <div class="text-box-left">
+          <!-- Slideshow  -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo1"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/membrillo1.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo2"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/membrillo2.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo3"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/membrillo3.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo4"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/membrillo4.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 5 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo5"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/membrillo5.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 6 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="membrillo6"
+                data-group="membrillo-ingameimgs"
+                class="clickable-img"
+                src="assets/project/socks17.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="Design process"
+              />
+              <div class="slideshow-text">Design process</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(5)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(6)"></span>
+          </div>
+
+          <br />
+          <br />
+
+          <!-- img -->
+          <div class="single-image-div">
+            <img
+              id="socks10"
+              class="single-project-img-left clickable-img"
+              src="assets/project/socks16.png"
+              onclick="openModal(this.id)"
+              alt="Extract of puzzle dependency chart"
+            />
+            <div class="clickable-img-caption">
+              Extract of puzzle dependency chart
+            </div>
+          </div>
+        </div>
+        <div class="text-box-right" style="line-height: 1.7">
+          <h2>Solo Developer</h2>
+          <ul class="contribution-list">
+            <li>
+              <b>Game Design & UX/UI:</b> Designed the game's flow through a
+              puzzle dependency chart, establishing how each item, sock, and
+              interaction unlocked the next layer of the game. Created all
+              minigames and puzzles, and designed the entire UI, including menus
+              and the achievement system.
+            </li>
+            <li>
+              <b>Art:</b> Created every visual asset in the game, including 30
+              unique sock designs and the full room layout and props. Made all
+              icons, menus, animations, and splash art.
+            </li>
+            <li>
+              <b>Narrative:</b> Wrote all item descriptions, sock flavor text,
+              achievements, and contextual feedback to guide and reward the
+              player. Produced all writing in both English and Chilean Spanish,
+              incorporating cultural references to give the game a distinctive
+              local personality.
+            </li>
+            <li>
+              <b>Implementation:</b> Developed the whole project in Unity using
+              Adventure Creator and visual scripting, coding additionally in C#
+              for some of the puzzles.
+            </li>
+            <li>All audio (music and SFX) was composed by Francesca Melio.</li>
+          </ul>
+
+          <br />
+
+          <a
+            href="assets/project/Puzzle dependency chart.pdf"
+            class="btn btn-secondary btn-pdf"
+            target="_blank"
+            download="The_Dogs_Mystery_flowchart"
+            style="margin-top: 20px; align-self: center"
+            >Download puzzle dependency chart</a
+          >
+        </div>
+      </article>
+
+      <div class="division"></div>
+
+      <div class="content-text">
+        <h3>Postmortem</h3>
+      </div>
+      <article class="postmortem-container">
+        <div class="postmortem-subcontainer-1">
+          <h2>What went well</h2>
+          <ul class="contribution-list">
+            <li>
+              The game successfully conveyed the emotional and linguistic
+              challenges of studying abroad, resonating with exchange students
+              and narrative-driven game players, both wanting to see more.
+            </li>
+            <li>
+              The language barrier mechanic was well received as a way to create
+              empathy through gameplay.
+            </li>
+            <li>
+              Managing every aspect of development allowed for a deeper
+              understanding of game creation and a cohesive vision.
+            </li>
+          </ul>
+        </div>
+        <div class="postmortem-subcontainer-2">
+          <h2>What went wrong</h2>
+          <ul class="contribution-list">
+            <li>
+              Balancing game design, narrative, art, sound and implementation by
+              myself was overwhelming under a tight deadline.
+            </li>
+            <li>
+              The autobiographical nature of the project made it harder to
+              refine certain aspects objectively.
+            </li>
+            <li>
+              Encountered some technical issues that I couldn't resolve on my
+              own.
+            </li>
+          </ul>
+        </div>
+        <div class="postmortem-subcontainer-1">
+          <h2>What I learned</h2>
+          <ul class="contribution-list">
+            <li>
+              This project reinforced my passion for meaningful storytelling and
+              the impact it can have. The narrative aspect was crucial and by
+              far the most challenging aspect to develop, but also the most
+              rewarding.
+            </li>
+            <li>
+              Even though it was nice having full control of the project, this
+              kind of game would be more managable and less intimidating with a
+              team.
+            </li>
+            <li>
+              Scope. Choosing a section of the full game for the demo was
+              challenging, the workload became almost unbearable because of my
+              ambition.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+      <button class="modal-prev" onclick="showPrev()">&#10094;</button>
+      <button class="modal-next" onclick="showNext()">&#10095;</button>
+    </div>
+
+    <!--Next / Previous project-->
+    <a class="prev-project" href="p_bubblegum_galaxy.html">
+      <p class="prev-project-arrow">&#10094;</p>
+    </a>
+    <a class="next-project" href="p_caleidomar.html">
+      <p class="prev-project-arrow">&#10095;</p>
+    </a>
+
+    <!--Footer-->
+    <div include-html="modules/footer.html"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

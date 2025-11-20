@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Paula Santa María - Portfolio</title>
+    <meta name="title" content="Paula Santa María - Portfolio" />
+    <meta
+      name="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Paula Santa María - Portfolio" />
+    <meta
+      itemprop="description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta itemprop="image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paulasantamaria.netlify.app" />
+    <meta property="og:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="og:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://paulasantamaria.netlify.app"
+    />
+    <meta property="twitter:title" content="Paula Santa María - Portfolio" />
+    <meta
+      property="twitter:description"
+      content="I'm a Chilean game designer with a passion for meaningful narratives, captivating visuals and innovative game mechanics. Check out some of the projects I've worked on!"
+    />
+    <meta property="twitter:image" content="https://i.imgur.com/axJLWuB.png" />
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <script
+      src="https://kit.fontawesome.com/e91b0f15d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="project-modal project-slideshow">
+    <header id="hero">
+      <!-- Navbar -->
+      <div include-html="modules/navbar.html"></div>
+
+      <section class="header-container">
+        <div class="content-text">
+          <h2>Returns Guaranteed</h2>
+          <p>2025</p>
+        </div>
+        <a
+          href="https://pulpaulaa.itch.io/returns-guaranteed"
+          class="btn btn-secondary"
+          target="_blank"
+          >Play on itch.io</a
+        >
+      </section>
+    </header>
+
+    <section class="container">
+      <!-- Summary and video -->
+      <article class="single-project-article">
+        <div class="text-box-left special-box">
+          <h2>Summary</h2>
+          <p>
+            <i>Returns Guaranteed</i> is a short hidden object game with a
+            crafting mechanic, where you play as a Lost & Found office worker
+            who must get creative in order to deliver all requested objects.
+          </p>
+          <p class="p-textbox">
+            <b>Engine:</b> Unreal Engine 5<br />
+            <b>Platform:</b> PC <br />
+            <b>Role:</b> Solo developer <br />
+            <b>Type:</b> Final course project <br />
+          </p>
+        </div>
+        <!-- Foto o video -->
+        <img
+          id="returns"
+          class="single-project-img-right clickable-img"
+          src="assets/project/returns.png"
+          onclick="openModal(this.id)"
+          alt=""
+        />
+      </article>
+
+      <div class="division"></div>
+
+      <!-- My contribution -->
+      <div class="content-text">
+        <h3>My Contribution</h3>
+      </div>
+      <article class="single-project-article">
+        <div class="text-box-left">
+          <!-- Slideshow  -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- 1 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="returns1"
+                data-group="returns-ingameimgs"
+                class="clickable-img"
+                src="assets/project/returns2.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 2 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="returns2"
+                data-group="returns-ingameimgs"
+                class="clickable-img"
+                src="assets/project/returns3.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 3 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="returns3"
+                data-group="returns-ingameimgs"
+                class="clickable-img"
+                src="assets/project/returns4.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- 4 -->
+            <div class="slideshow-mySlides slideshow-fade">
+              <img
+                id="returns4"
+                data-group="returns-ingameimgs"
+                class="clickable-img"
+                src="assets/project/returns5.png"
+                style="width: 100%"
+                onclick="openModal(this.id)"
+                alt="In-game images"
+              />
+              <div class="slideshow-text">In-game images</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+            <span class="slideshow-dot" onclick="currentSlide(4)"></span>
+          </div>
+
+          <br />
+
+          <div class="single-image-div">
+            <img
+              id="img_proceso3"
+              class="single-project-img-left clickable-img"
+              src="assets/project/returns7.png"
+              onclick="openModal(this.id)"
+              alt="Early environment sketches"
+            />
+            <div class="clickable-img-caption">Early environment sketches</div>
+          </div>
+        </div>
+        <div class="text-box-right" style="line-height: 1.7">
+          <h2>Solo Developer</h2>
+          <ul class="contribution-list">
+            <li>
+              Programmed all the game's systems using Blueprints, including the
+              delivery and crafting systems, notifications and inventory.
+              Developed all core gameplay systems in Unreal Engine using
+              Blueprints, including the delivery system, crafting system,
+              inventory, and notifications.
+            </li>
+            <li>
+              Implemented a flexible tag-based logic that allows multiple valid
+              solutions per request.
+            </li>
+            <li>
+              Designed and implemented over 40 unique delivery requests and 26
+              creative and unexpected crafting recipes.
+            </li>
+            <li>
+              Designed the environment layout and lighting to create a cozy and
+              cluttered office atmosphere.
+            </li>
+            <li>
+              Because of the limited scope, worked mainly with external 3D
+              assets, icons and sounds, although I modeled the game's logo.
+            </li>
+          </ul>
+
+          <br />
+
+          <div class="single-image-div">
+            <img
+              id="img_proceso1"
+              class="single-project-img-left clickable-img"
+              src="assets/project/returns8.png"
+              onclick="openModal(this.id)"
+              alt="Crafting Blueprint sample"
+            />
+            <div class="clickable-img-caption">Crafting Blueprint sample</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="division"></div>
+
+      <div class="content-text">
+        <h3>Postmortem</h3>
+      </div>
+      <article class="postmortem-container">
+        <div class="postmortem-subcontainer-1">
+          <h2>What went well</h2>
+          <ul class="contribution-list">
+            <li>
+              I delivered the full MVP on time, with a fully playable prototype
+              and no major game-breaking bugs.
+            </li>
+            <li>
+              Despite relying mostly on external 3D assets because of the scope,
+              the overall visual style, lighting, and environment layout
+              successfully conveyed the atmosphere I envisioned.
+            </li>
+            <li>
+              I explored an interesting mechanic and learned a new engine
+              simultaneously, and still managed to produce a functional game.
+            </li>
+          </ul>
+        </div>
+        <div class="postmortem-subcontainer-2">
+          <h2>What went wrong</h2>
+          <ul class="contribution-list">
+            <li>
+              I had a vision for the artstyle, but the scope was very small and
+              I had to prioritize the mechanics, so adapting to the available
+              assets was necessary but frustrating.
+            </li>
+            <li>
+              With such a tight deadline, I wasn’t able to playtest or tune the
+              difficulty properly, and the final game ended up being harder than
+              intended.
+            </li>
+            <li>
+              A few technical issues remained unsolved because of the short
+              development period.
+            </li>
+          </ul>
+        </div>
+        <div class="postmortem-subcontainer-1">
+          <h2>What I learned</h2>
+          <ul class="contribution-list">
+            <li>
+              I’m used to handling everything and not choosing one role over the
+              other, but this time I had to consciously let go of the art side,
+              which in turn helped me prioritize learning the engine.
+            </li>
+            <li>
+              I discovered how much I enjoy working with Blueprints. I've always
+              enjoyed visual scripting, and this tool really proved to be the
+              best at it.
+            </li>
+            <li>
+              Scope management is everything. Keeping the project small ensured
+              it was finished, functional, and aligned with my goals.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+      <button class="modal-prev" onclick="showPrev()">&#10094;</button>
+      <button class="modal-next" onclick="showNext()">&#10095;</button>
+    </div>
+
+    <!--Next / Previous project-->
+    <a class="prev-project" href="p_caleidomar.html">
+      <p class="prev-project-arrow">&#10094;</p>
+    </a>
+    <a class="next-project" href="p_board_games.html">
+      <p class="prev-project-arrow">&#10095;</p>
+    </a>
+
+    <!--Footer-->
+    <div include-html="modules/footer.html"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
