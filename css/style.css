@@ -511,12 +511,13 @@ iframe {
   padding-top: 150px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
   outline: 4px solid red !important;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Modal Content (image) */
@@ -616,6 +617,37 @@ body.modal-open {
 
 .modal-next {
   right: 10%;
+}
+
+.modal-close {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+
+  position: fixed;
+  top: 10%;
+  right: 10%;
+
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+
+  border-radius: 1.5rem; /* circle */
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000;
+  opacity: 0.6;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  z-index: 5;
+}
+
+.modal-close:hover {
+  opacity: 0.9;
 }
 
 /* -------------------------------- Slideshow ------------------------------- */
@@ -787,7 +819,11 @@ body.modal-open {
 
 /* ----------------------------- Responsiveness ----------------------------- */
 
-@media (max-width: 1000px) {
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1100px) {
   .project {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -863,12 +899,51 @@ body.modal-open {
   .special-box2 img {
     align-self: center;
   }
-}
 
-@media (max-width: 768px) {
+  .prev-project,
+  .next-project {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .special-box {
+    align-items: start;
+  }
+
+  .text-box-right {
+    order: -1;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+
+  .text-box-right.board-games {
+    align-items: center;
+  }
 }
 
 @media (max-width: 670px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .prev-project,
+  .next-project {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .special-box {
+    align-items: start;
+  }
+
+  .text-box-right {
+    order: -1;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+
+  .text-box-right.board-games {
+    align-items: center;
+  }
+
   .navbar .nav-menu {
     position: fixed;
     right: -100vw;
@@ -931,6 +1006,10 @@ body.modal-open {
 }
 
 @media (max-width: 600px) {
+  .mobile-only {
+    display: block;
+  }
+
   .project {
     display: grid;
     grid-template-columns: 1fr;
@@ -938,11 +1017,29 @@ body.modal-open {
 
   .header-container .btn {
     border-radius: 30px;
-    width: 80%;
   }
 
   .single-project-img-left,
   .single-project-img-right {
     min-width: 0;
+  }
+
+  .prev-project,
+  .next-project {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .special-box {
+    align-items: start;
+  }
+
+  .text-box-right {
+    order: -1;
+    margin-bottom: 2rem;
+    align-items: start;
+  }
+
+  .text-box-right.board-games {
+    align-items: center;
   }
 }

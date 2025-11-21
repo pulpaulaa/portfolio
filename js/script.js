@@ -187,115 +187,136 @@ function init() {
   setupSlideshow("slideshow-mySlides", "slideshow-dot", "");
   setupSlideshow("slideshow-mySlides2", "slideshow-dot2", "2");
 
+  /* ---------------- CLICKABLE VIDEO HANDLING ---------------- */
+  const mediaElements = document.querySelectorAll(".clickable-media");
+
+  mediaElements.forEach((el) => {
+    // make sure the element has an id
+    if (!el.id) {
+      console.warn("clickable-media missing id", el);
+      return;
+    }
+
+    el.addEventListener("click", (event) => {
+      // prevent toggling play/pause on the video element itself
+      event.preventDefault();
+      event.stopPropagation();
+
+      // open modal (modal logic will render the video inside it)
+      if (typeof openModal === "function") {
+        openModal(el.id);
+      } else {
+        // fallback if openModal hasn't been defined yet (rare since this runs before modal init),
+        // we can call it later — but typically includeHTML(init) ensures modal code is in init
+        console.warn("openModal not defined yet");
+      }
+    });
+  });
+
   /* -------------------------------------------------------------------------- */
   /*                                    MODAL                                   */
   /* -------------------------------------------------------------------------- */
 
   if (document.body.classList.contains("project-modal")) {
     const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("img01");
+    const modalContainer = document.getElementById("modal-content-container");
     const captionText = document.getElementById("caption");
 
-    let groupImages = [];
+    let groupItems = [];
     let currentIndex = 0;
     let currentGroup = null;
 
-    // helper that calls the correct slideshow handler for a data-group
-    function syncSlideshowToIndex(indexForSync) {
-      if (!currentGroup) return;
-      const mapping = groupToSlideshowHandler[currentGroup];
-      if (mapping && typeof window[mapping.handlerName] === "function") {
-        window[mapping.handlerName](indexForSync);
-      } else {
-        // fallback to the primary slideshow (if available)
-        if (typeof window.currentSlide === "function") {
-          window.currentSlide(indexForSync);
-        }
+    // Injects either an image OR a video into the modal
+    function renderModalContent(element) {
+      modalContainer.innerHTML = ""; // Clear previous content
+
+      if (element.tagName.toLowerCase() === "img") {
+        const img = document.createElement("img");
+        img.className = "modal-content";
+        img.src = element.src;
+        modalContainer.appendChild(img);
+      } else if (element.tagName.toLowerCase() === "video") {
+        const video = document.createElement("video");
+        video.className = "modal-content";
+        video.src = element.querySelector("source")?.src || element.src;
+        video.controls = true;
+        video.autoplay = true;
+        modalContainer.appendChild(video);
       }
     }
 
-    // Close helper for consistent cleanup
+    window.openModal = function (id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      modal.style.display = "block";
+      document.body.classList.add("modal-open");
+
+      currentGroup = el.getAttribute("data-group");
+
+      if (currentGroup) {
+        // Image + video mixed selection
+        groupItems = Array.from(
+          document.querySelectorAll(`[data-group="${currentGroup}"]`)
+        );
+
+        currentIndex = groupItems.findIndex((item) => item.id === id);
+
+        document.querySelector(".modal-prev").style.display = "flex";
+        document.querySelector(".modal-next").style.display = "flex";
+      } else {
+        groupItems = [el];
+        currentIndex = 0;
+
+        document.querySelector(".modal-prev").style.display = "none";
+        document.querySelector(".modal-next").style.display = "none";
+      }
+
+      renderModalContent(groupItems[currentIndex]);
+      captionText.innerHTML = el.alt || "";
+    };
+
+    function stopVideoIfAny() {
+      const vid = modalContainer.querySelector("video");
+      if (vid) vid.pause();
+    }
+
+    window.showPrev = function () {
+      if (!currentGroup) return;
+      stopVideoIfAny();
+
+      currentIndex--;
+      if (currentIndex < 0) currentIndex = groupItems.length - 1;
+
+      renderModalContent(groupItems[currentIndex]);
+      captionText.innerHTML = groupItems[currentIndex].alt || "";
+    };
+
+    window.showNext = function () {
+      if (!currentGroup) return;
+      stopVideoIfAny();
+
+      currentIndex++;
+      if (currentIndex >= groupItems.length) currentIndex = 0;
+
+      renderModalContent(groupItems[currentIndex]);
+      captionText.innerHTML = groupItems[currentIndex].alt || "";
+    };
+
     window.closeModal = function () {
-      if (!modal) return;
+      stopVideoIfAny();
       modal.style.display = "none";
       document.body.classList.remove("modal-open");
     };
 
-    window.openModal = function (id) {
-      const img = document.getElementById(id);
-      if (!img || !modal || !modalImg || !captionText) return;
-
-      modal.style.display = "block";
-      modalImg.src = img.src;
-      captionText.innerHTML = img.alt;
-      document.body.classList.add("modal-open");
-
-      currentGroup = img.getAttribute("data-group");
-
-      if (currentGroup) {
-        groupImages = Array.from(
-          document.querySelectorAll(`img[data-group="${currentGroup}"]`)
-        );
-        currentIndex = groupImages.findIndex((el) => el.id === id);
-
-        const prevBtn = document.querySelector(".modal-prev");
-        const nextBtn = document.querySelector(".modal-next");
-        if (prevBtn) prevBtn.style.display = "flex";
-        if (nextBtn) nextBtn.style.display = "flex";
-
-        // ensure main slideshow shows the same image when opening modal
-        syncSlideshowToIndex(currentIndex + 1);
-      } else {
-        groupImages = [];
-        currentIndex = 0;
-        const prevBtn = document.querySelector(".modal-prev");
-        const nextBtn = document.querySelector(".modal-next");
-        if (prevBtn) prevBtn.style.display = "none";
-        if (nextBtn) nextBtn.style.display = "none";
-      }
-    };
-
-    window.showPrev = function () {
-      if (!currentGroup || !groupImages || groupImages.length === 0) return;
-
-      currentIndex--;
-      if (currentIndex < 0) currentIndex = groupImages.length - 1;
-
-      modalImg.src = groupImages[currentIndex].src;
-      captionText.innerHTML = groupImages[currentIndex].alt;
-
-      // sync corresponding slideshow
-      syncSlideshowToIndex(currentIndex + 1);
-    };
-
-    window.showNext = function () {
-      if (!currentGroup || !groupImages || groupImages.length === 0) return;
-
-      currentIndex++;
-      if (currentIndex >= groupImages.length) currentIndex = 0;
-
-      modalImg.src = groupImages[currentIndex].src;
-      captionText.innerHTML = groupImages[currentIndex].alt;
-
-      // sync corresponding slideshow
-      syncSlideshowToIndex(currentIndex + 1);
-    };
-
-    // Click outside modal image closes it
     window.onclick = function (event) {
       if (event.target === modal) {
-        window.closeModal();
+        stopVideoIfAny();
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
       }
     };
-
-    // Mobile: tap outside image closes modal (protects against other touch behavior)
-    modal.addEventListener &&
-      modal.addEventListener("touchstart", function (event) {
-        if (event.target === modal) {
-          window.closeModal();
-        }
-      });
-  } // end project-modal
+  }
 } // end init
 
 // -------------------- start --------------------
