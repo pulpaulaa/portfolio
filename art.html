@@ -92,36 +92,7 @@
   <body class="project-modal">
     <header id="hero">
       <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a class="nav-link" href="index.html">HOME</a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="art.html">ART</a></li>
-            <!-- <li><a class="nav-link" href="industrial.html">INDUSTRIAL</a></li>-->
-            <li><a class="nav-link" href="about_me.html">ABOUT ME</a></li>
-            <li><a class="nav-link" href="#footer">CONTACT</a></li>
-
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
-            </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
+      <div include-html="modules/navbar.html"></div>
 
       <section class="header-container">
         <div class="content-text">
@@ -136,6 +107,7 @@
         <div class="gallery-item">
           <img
             id="art2"
+            data-group="art"
             src="/assets/art/art2.jpg"
             alt="Hollow Knight gouache painting"
             class="clickable-img"
@@ -145,6 +117,7 @@
         <div class="gallery-item">
           <img
             id="art1"
+            data-group="art"
             src="/assets/art/art1.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -152,11 +125,17 @@
           />
         </div>
         <div class="gallery-item">
-          <video id="art5" src="/assets/art/art5.mp4" controls></video>
+          <video
+            id="art5"
+            data-group="art"
+            src="/assets/art/art5.mp4"
+            controls
+          ></video>
         </div>
         <div class="gallery-item">
           <img
             id="art6"
+            data-group="art"
             src="/assets/art/art6.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -166,6 +145,7 @@
         <div class="gallery-item">
           <img
             id="art4"
+            data-group="art"
             src="/assets/art/art4.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -175,6 +155,7 @@
         <div class="gallery-item">
           <img
             id="art10"
+            data-group="art"
             src="/assets/art/art10.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -184,6 +165,7 @@
         <div class="gallery-item">
           <img
             id="art11"
+            data-group="art"
             src="/assets/art/art11.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -191,11 +173,17 @@
           />
         </div>
         <div class="gallery-item">
-          <video id="art15" src="/assets/art/art15.mp4" controls></video>
+          <video
+            id="art15"
+            data-group="art"
+            src="/assets/art/art15.mp4"
+            controls
+          ></video>
         </div>
         <div class="gallery-item">
           <img
             id="art3"
+            data-group="art"
             src="/assets/art/art3.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -205,6 +193,7 @@
         <div class="gallery-item">
           <img
             id="art8"
+            data-group="art"
             src="/assets/art/art8.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -214,6 +203,7 @@
         <div class="gallery-item">
           <img
             id="art13"
+            data-group="art"
             src="/assets/art/art13.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -223,6 +213,7 @@
         <div class="gallery-item">
           <img
             id="art14"
+            data-group="art"
             src="/assets/art/art14.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -232,6 +223,7 @@
         <div class="gallery-item">
           <img
             id="art7"
+            data-group="art"
             src="/assets/art/art7.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -241,6 +233,7 @@
         <div class="gallery-item">
           <img
             id="art9"
+            data-group="art"
             src="/assets/art/art9.jpg"
             class="clickable-img"
             onclick="openModal(this.id)"
@@ -252,41 +245,14 @@
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-      <!-- Modal Content (The Image) -->
       <img class="modal-content" id="img01" />
-      <!-- Modal Caption (Image Text) -->
       <div id="caption"></div>
+      <button class="modal-prev" onclick="showPrev()">&#10094;</button>
+      <button class="modal-next" onclick="showNext()">&#10095;</button>
     </div>
 
-    <footer id="footer">
-      <div class="container">
-        <h2>Contact</h2>
-        <p style="margin-bottom: 0.5rem">
-          Feel free to send me an email, message or connect with me in LinkedIn!
-        </p>
-        <a href="mailto:paula.santa.mariab@gmail.com" style="font-weight: 700"
-          >paula.santa.mariab@gmail.com</a
-        >
-        <!-- Social links -->
-        <div class="social">
-          <a href="https://pulpaulaa.itch.io/" target="_blank">
-            <i class="fa-brands fa-itch-io social-icons"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/paula-santa-maria-bartolucci/"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin-in social-icons"></i>
-          </a>
-          <a href="https://www.instagram.com/pulpaulaa/" target="_blank">
-            <i class="fa fa-instagram social-icons"></i>
-          </a>
-        </div>
-        <p style="color: gray; font-size: 0.7em">
-          Website design and development by Paula Santa María.
-        </p>
-      </div>
-    </footer>
+    <!--Footer-->
+    <div include-html="modules/footer.html"></div>
 
     <script src="js/script.js"></script>
   </body>
